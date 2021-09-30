@@ -1,0 +1,29 @@
+GET http://localhost:3000/users/
+
+###
+
+GET http://localhost:3000/users/6155386540422d1ebd6c5f15
+
+###
+
+POST http://localhost:3000/users/
+
+{
+    "email": "john2.doe@user.com",
+    "name": "John2 Doe",
+    "password": "12345"
+}
+
+### 
+
+PATCH http://localhost:3000/users/6155386540422d1ebd6c5f15
+
+{
+  "email": "john2.doe2@user.com",
+  "name": "John2 Doe3",
+  "passowrd": "qwert"
+}
+
+###
+
+DELETE http://localhost:3000/users/6155382540422d1ebd6c5f12

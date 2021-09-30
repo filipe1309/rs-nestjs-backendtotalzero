@@ -50,3 +50,9 @@ users
 REST API
 entry points y
 ```
+
+https://docs.nestjs.com/techniques/mongodb
+
+```sh
+yarn add @nestjs/mongoose mongoose
+```
