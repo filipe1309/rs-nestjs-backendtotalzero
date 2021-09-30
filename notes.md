@@ -41,3 +41,12 @@ $ npm run test:cov
 ```sh
 nest new rs-nestjs-backendtotalzero
 ```
+
+https://docs.nestjs.com/recipes/crud-generator
+
+```sh
+nest g resource
+users
+REST API
+entry points y
+```
