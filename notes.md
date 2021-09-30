@@ -36,3 +36,8 @@ $ npm run test:e2e
 # test coverage
 $ npm run test:cov
 ```
+
+
+```sh
+nest new rs-nestjs-backendtotalzero
+```
