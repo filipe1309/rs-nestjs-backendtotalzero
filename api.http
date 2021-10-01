@@ -7,16 +7,18 @@ GET http://localhost:3000/users/6155386540422d1ebd6c5f15
 ###
 
 POST http://localhost:3000/users/
+Content-Type: application/json
 
 {
-    "email": "john2.doe@user.com",
-    "name": "John2 Doe",
+    "email": "john.doe@cloud.com",
+    "name": "John Doe Cloud",
     "password": "12345"
 }
 
 ### 
 
 PATCH http://localhost:3000/users/6155386540422d1ebd6c5f15
+Content-Type: application/json
 
 {
   "email": "john2.doe2@user.com",

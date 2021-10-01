@@ -1,15 +1,22 @@
 import { Module } from '@nestjs/common';
+import { ConfigModule } from '@nestjs/config';
 import { MongooseModule } from '@nestjs/mongoose';
 import { UsersModule } from './users/users.module';
 
 @Module({
-  imports: [MongooseModule.forRoot('mongodb://db:27017/totalzero', {
-    user: 'dotr',
-    pass: '123mudar',
-    dbname: 'totalzero',
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  }), UsersModule],
+  imports: [
+    ConfigModule.forRoot({
+      isGlobal: true,
+    }),
+    MongooseModule.forRoot(process.env.DATABASE_DSN, {
+      user: process.env.DATABASE_USER,
+      pass: process.env.DATABASE_PASSWORD,
+      dbname: process.env.DATABASE_NAME,
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    }),
+    UsersModule
+  ],
   controllers: [],
   providers: [],
 })
